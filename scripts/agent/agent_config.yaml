@@ -1,0 +1,20 @@
+# SHAP interpretation agent — LLM settings
+#
+# backend:     anthropic | openai
+# model:       provider model id
+# effort:      anthropic reasoning effort (low | medium | high | xhigh | max)
+# max_tokens:  generation cap
+#
+# Examples:
+#   backend: anthropic
+#   model: claude-opus-5
+#
+#   backend: openai
+#   model: gpt-4o
+#
+# Override at the command line with --config, --backend, or --model.
+
+backend: anthropic
+model: claude-opus-5
+effort: high
+max_tokens: 16000
