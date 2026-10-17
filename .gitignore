@@ -47,6 +47,7 @@ results/model_objects_multi.pkl
 # Local test VCFs, except the example the docs and dashboard reference
 test_data/*
 !test_data/ERR040120.filtered.vcf.gz
+!test_data/README.md
 
 # Per-isolate prediction outputs (JSON, SHAP CSVs, waterfall PNGs)
 results/predictions/
