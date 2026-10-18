@@ -393,5 +393,1114 @@
         "catalogue_site_alleles": []
       }
     ]
+  },
+  "ISONIAZID": {
+    "sample": "ERR038266",
+    "drug": "ISONIAZID",
+    "prediction": "Susceptible",
+    "probability_resistant": 0.0346,
+    "explanation": "ERR038266 is predicted Susceptible to ISONIAZID (probability of resistance 0.0346).\n\nThe largest SHAP contribution is pos_2155168 in katG (reference allele, SHAP -0.3200), which pushes the prediction toward susceptibility. This coordinate is the site of WHO alleles graded associated with Isoniazid resistance (katG p.Ser315Thr, katG p.Ser315Asn, katG p.Ser315Ile). The isolate carries the reference base.\n\npos_2154724 in katG (C>A, SHAP -0.0611), which pushes the prediction toward susceptibility. In the WHO mutation catalogue this allele is katG p.Arg463Leu (katG_p.Arg463Leu), a missense variant. The final confidence grading for Isoniazid is 5) Not assoc w R (not associated with resistance).\n\npos_1674481 in inhA (reference allele, SHAP -0.0128), which pushes the prediction toward susceptibility. This coordinate is the site of WHO alleles graded associated with Isoniazid resistance (inhA p.Ser94Ala). The isolate carries the reference base.\n\nNo allele in this VCF is graded 1) Assoc w R or 2) Assoc w R - Interim for Isoniazid.\n\nSHAP values are the contributions of each feature to this model's resistant-class score for the isolate. WHO grades come from the second-edition mutation catalogue (WHO/UCN/TB/2023.7): an exact match on NC_000962.3 position, reference nucleotide, and alternate nucleotide, then the final confidence grading for the drug.",
+    "who_catalogue_source": "WHO catalogue of mutations in Mycobacterium tuberculosis complex, second edition (WHO/UCN/TB/2023.7)",
+    "known_resistance_variants": [],
+    "top_shap_features": [
+      {
+        "position": "pos_2155168",
+        "gene": "katG",
+        "encoded_value": 0,
+        "nucleotide": "REF",
+        "reference_nucleotide": null,
+        "alternate_nucleotide": null,
+        "shap_value": -0.319988,
+        "who_catalogue": null,
+        "who_other_drug_associations": [],
+        "catalogue_site_alleles": [
+          "katG p.Ser315Thr",
+          "katG p.Ser315Asn",
+          "katG p.Ser315Ile"
+        ]
+      },
+      {
+        "position": "pos_761155",
+        "gene": "rpoB",
+        "encoded_value": 0,
+        "nucleotide": "REF",
+        "reference_nucleotide": null,
+        "alternate_nucleotide": null,
+        "shap_value": -0.082416,
+        "who_catalogue": null,
+        "who_other_drug_associations": [],
+        "catalogue_site_alleles": []
+      },
+      {
+        "position": "pos_2154724",
+        "gene": "katG",
+        "encoded_value": 1,
+        "nucleotide": "A",
+        "reference_nucleotide": "C",
+        "alternate_nucleotide": "A",
+        "shap_value": -0.06106,
+        "who_catalogue": {
+          "matched": true,
+          "chromosome": "NC_000962.3",
+          "position": 2154724,
+          "reference_nucleotide": "C",
+          "alternative_nucleotide": "A",
+          "entries": [
+            {
+              "drug": "Isoniazid",
+              "gene": "katG",
+              "mutation": "p.Arg463Leu",
+              "variant": "katG_p.Arg463Leu",
+              "tier": 1,
+              "effect": "missense_variant",
+              "final_confidence_grading": "5) Not assoc w R",
+              "grading_plain": "not associated with resistance",
+              "associated_with_resistance": false,
+              "ppv": 0.4833,
+              "ppv_solo": 0.0445,
+              "present_solo_r": 327,
+              "present_solo_s": 7029,
+              "additional_grading": null
+            }
+          ],
+          "coordinate_hits": []
+        },
+        "who_other_drug_associations": [],
+        "catalogue_site_alleles": []
+      },
+      {
+        "position": "pos_4247431",
+        "gene": "embB",
+        "encoded_value": 0,
+        "nucleotide": "REF",
+        "reference_nucleotide": null,
+        "alternate_nucleotide": null,
+        "shap_value": -0.050075,
+        "who_catalogue": null,
+        "who_other_drug_associations": [],
+        "catalogue_site_alleles": []
+      },
+      {
+        "position": "pos_4247429",
+        "gene": "embB",
+        "encoded_value": 0,
+        "nucleotide": "REF",
+        "reference_nucleotide": null,
+        "alternate_nucleotide": null,
+        "shap_value": -0.039663,
+        "who_catalogue": null,
+        "who_other_drug_associations": [],
+        "catalogue_site_alleles": []
+      },
+      {
+        "position": "pos_762434",
+        "gene": "rpoB",
+        "encoded_value": 4,
+        "nucleotide": "G",
+        "reference_nucleotide": "T",
+        "alternate_nucleotide": "G",
+        "shap_value": -0.024392,
+        "who_catalogue": {
+          "matched": true,
+          "chromosome": "NC_000962.3",
+          "position": 762434,
+          "reference_nucleotide": "T",
+          "alternative_nucleotide": "G",
+          "entries": [],
+          "coordinate_hits": [
+            {
+              "variant": "rpoB_c.2628T>G",
+              "gene": "rpoB",
+              "mutation": "c.2628T>G",
+              "effect": "synonymous_variant"
+            }
+          ]
+        },
+        "who_other_drug_associations": [],
+        "catalogue_site_alleles": []
+      },
+      {
+        "position": "pos_1834177",
+        "gene": "rpsA",
+        "encoded_value": 0,
+        "nucleotide": "REF",
+        "reference_nucleotide": null,
+        "alternate_nucleotide": null,
+        "shap_value": -0.01379,
+        "who_catalogue": null,
+        "who_other_drug_associations": [],
+        "catalogue_site_alleles": []
+      },
+      {
+        "position": "pos_1674481",
+        "gene": "inhA",
+        "encoded_value": 0,
+        "nucleotide": "REF",
+        "reference_nucleotide": null,
+        "alternate_nucleotide": null,
+        "shap_value": -0.012805,
+        "who_catalogue": null,
+        "who_other_drug_associations": [],
+        "catalogue_site_alleles": [
+          "inhA p.Ser94Ala"
+        ]
+      },
+      {
+        "position": "pos_761110",
+        "gene": "rpoB",
+        "encoded_value": 0,
+        "nucleotide": "REF",
+        "reference_nucleotide": null,
+        "alternate_nucleotide": null,
+        "shap_value": -0.010628,
+        "who_catalogue": null,
+        "who_other_drug_associations": [],
+        "catalogue_site_alleles": []
+      },
+      {
+        "position": "pos_4247730",
+        "gene": "embB",
+        "encoded_value": 0,
+        "nucleotide": "REF",
+        "reference_nucleotide": null,
+        "alternate_nucleotide": null,
+        "shap_value": -0.010267,
+        "who_catalogue": null,
+        "who_other_drug_associations": [],
+        "catalogue_site_alleles": []
+      },
+      {
+        "position": "pos_1674048",
+        "gene": "fabG1",
+        "encoded_value": 0,
+        "nucleotide": "REF",
+        "reference_nucleotide": null,
+        "alternate_nucleotide": null,
+        "shap_value": -0.010248,
+        "who_catalogue": null,
+        "who_other_drug_associations": [],
+        "catalogue_site_alleles": [
+          "inhA c.-154G>A"
+        ]
+      },
+      {
+        "position": "pos_4241562",
+        "gene": "embC",
+        "encoded_value": 1,
+        "nucleotide": "A",
+        "reference_nucleotide": "G",
+        "alternate_nucleotide": "A",
+        "shap_value": -0.009571,
+        "who_catalogue": {
+          "matched": true,
+          "chromosome": "NC_000962.3",
+          "position": 4241562,
+          "reference_nucleotide": "G",
+          "alternative_nucleotide": "A",
+          "entries": [],
+          "coordinate_hits": [
+            {
+              "variant": "embC_p.Arg567His",
+              "gene": "embC",
+              "mutation": "p.Arg567His",
+              "effect": "missense_variant"
+            }
+          ]
+        },
+        "who_other_drug_associations": [],
+        "catalogue_site_alleles": []
+      },
+      {
+        "position": "pos_763031",
+        "gene": "rpoB",
+        "encoded_value": 3,
+        "nucleotide": "C",
+        "reference_nucleotide": "T",
+        "alternate_nucleotide": "C",
+        "shap_value": 0.006798,
+        "who_catalogue": {
+          "matched": true,
+          "chromosome": "NC_000962.3",
+          "position": 763031,
+          "reference_nucleotide": "T",
+          "alternative_nucleotide": "C",
+          "entries": [],
+          "coordinate_hits": [
+            {
+              "variant": "rpoB_c.3225T>C",
+              "gene": "rpoB",
+              "mutation": "c.3225T>C",
+              "effect": "synonymous_variant"
+            }
+          ]
+        },
+        "who_other_drug_associations": [],
+        "catalogue_site_alleles": []
+      },
+      {
+        "position": "pos_4249583",
+        "gene": "embB",
+        "encoded_value": 0,
+        "nucleotide": "REF",
+        "reference_nucleotide": null,
+        "alternate_nucleotide": null,
+        "shap_value": -0.006252,
+        "who_catalogue": null,
+        "who_other_drug_associations": [],
+        "catalogue_site_alleles": []
+      },
+      {
+        "position": "pos_4242075",
+        "gene": "embC",
+        "encoded_value": 1,
+        "nucleotide": "A",
+        "reference_nucleotide": "G",
+        "alternate_nucleotide": "A",
+        "shap_value": -0.006054,
+        "who_catalogue": {
+          "matched": true,
+          "chromosome": "NC_000962.3",
+          "position": 4242075,
+          "reference_nucleotide": "G",
+          "alternative_nucleotide": "A",
+          "entries": [],
+          "coordinate_hits": [
+            {
+              "variant": "embC_p.Arg738Gln",
+              "gene": "embC",
+              "mutation": "p.Arg738Gln",
+              "effect": "missense_variant"
+            }
+          ]
+        },
+        "who_other_drug_associations": [],
+        "catalogue_site_alleles": []
+      },
+      {
+        "position": "pos_4248003",
+        "gene": "embB",
+        "encoded_value": 0,
+        "nucleotide": "REF",
+        "reference_nucleotide": null,
+        "alternate_nucleotide": null,
+        "shap_value": -0.00572,
+        "who_catalogue": null,
+        "who_other_drug_associations": [],
+        "catalogue_site_alleles": []
+      },
+      {
+        "position": "pos_761109",
+        "gene": "rpoB",
+        "encoded_value": 0,
+        "nucleotide": "REF",
+        "reference_nucleotide": null,
+        "alternate_nucleotide": null,
+        "shap_value": -0.005409,
+        "who_catalogue": null,
+        "who_other_drug_associations": [],
+        "catalogue_site_alleles": []
+      },
+      {
+        "position": "pos_761140",
+        "gene": "rpoB",
+        "encoded_value": 0,
+        "nucleotide": "REF",
+        "reference_nucleotide": null,
+        "alternate_nucleotide": null,
+        "shap_value": -0.004956,
+        "who_catalogue": null,
+        "who_other_drug_associations": [],
+        "catalogue_site_alleles": []
+      },
+      {
+        "position": "pos_2289047",
+        "gene": "pncA",
+        "encoded_value": 1,
+        "nucleotide": "A",
+        "reference_nucleotide": "G",
+        "alternate_nucleotide": "A",
+        "shap_value": 0.004829,
+        "who_catalogue": {
+          "matched": true,
+          "chromosome": "NC_000962.3",
+          "position": 2289047,
+          "reference_nucleotide": "G",
+          "alternative_nucleotide": "A",
+          "entries": [],
+          "coordinate_hits": [
+            {
+              "variant": "pncA_c.195C>T",
+              "gene": "pncA",
+              "mutation": "c.195C>T",
+              "effect": "synonymous_variant"
+            }
+          ]
+        },
+        "who_other_drug_associations": [],
+        "catalogue_site_alleles": []
+      },
+      {
+        "position": "pos_761095",
+        "gene": "rpoB",
+        "encoded_value": 0,
+        "nucleotide": "REF",
+        "reference_nucleotide": null,
+        "alternate_nucleotide": null,
+        "shap_value": -0.004221,
+        "who_catalogue": null,
+        "who_other_drug_associations": [],
+        "catalogue_site_alleles": []
+      }
+    ]
+  },
+  "ETHAMBUTOL": {
+    "sample": "ERR038266",
+    "drug": "ETHAMBUTOL",
+    "prediction": "Susceptible",
+    "probability_resistant": 0.0,
+    "explanation": "ERR038266 is predicted Susceptible to ETHAMBUTOL (probability of resistance 0.0000).\n\nThe largest SHAP contribution is pos_4247429 in embB (reference allele, SHAP -0.0620), which pushes the prediction toward susceptibility. This coordinate is the site of WHO alleles graded associated with Ethambutol resistance (embB p.Met306Leu, embB p.Met306Val). The isolate carries the reference base.\n\npos_4240172 in embC (G>A, SHAP -0.0592), which pushes the prediction toward susceptibility. In the WHO mutation catalogue this allele is embC p.Val104Met (embC_p.Val104Met), a missense variant. The final confidence grading for Ethambutol is 5) Not assoc w R (not associated with resistance).\n\npos_4242075 in embC (G>A, SHAP -0.0424), which pushes the prediction toward susceptibility. In the WHO mutation catalogue this allele is embC p.Arg738Gln (embC_p.Arg738Gln), a missense variant. The final confidence grading for Ethambutol is 5) Not assoc w R (not associated with resistance).\n\npos_4247431 in embB (reference allele, SHAP -0.0412), which pushes the prediction toward susceptibility. This coordinate is the site of WHO alleles graded associated with Ethambutol resistance (embB p.Met306Ile). The isolate carries the reference base.\n\nNo allele in this VCF is graded 1) Assoc w R or 2) Assoc w R - Interim for Ethambutol.\n\nSHAP values are the contributions of each feature to this model's resistant-class score for the isolate. WHO grades come from the second-edition mutation catalogue (WHO/UCN/TB/2023.7): an exact match on NC_000962.3 position, reference nucleotide, and alternate nucleotide, then the final confidence grading for the drug.",
+    "who_catalogue_source": "WHO catalogue of mutations in Mycobacterium tuberculosis complex, second edition (WHO/UCN/TB/2023.7)",
+    "known_resistance_variants": [],
+    "top_shap_features": [
+      {
+        "position": "pos_4247429",
+        "gene": "embB",
+        "encoded_value": 0,
+        "nucleotide": "REF",
+        "reference_nucleotide": null,
+        "alternate_nucleotide": null,
+        "shap_value": -0.061966,
+        "who_catalogue": null,
+        "who_other_drug_associations": [],
+        "catalogue_site_alleles": [
+          "embB p.Met306Leu",
+          "embB p.Met306Val"
+        ]
+      },
+      {
+        "position": "pos_4240172",
+        "gene": "embC",
+        "encoded_value": 1,
+        "nucleotide": "A",
+        "reference_nucleotide": "G",
+        "alternate_nucleotide": "A",
+        "shap_value": -0.059238,
+        "who_catalogue": {
+          "matched": true,
+          "chromosome": "NC_000962.3",
+          "position": 4240172,
+          "reference_nucleotide": "G",
+          "alternative_nucleotide": "A",
+          "entries": [
+            {
+              "drug": "Ethambutol",
+              "gene": "embC",
+              "mutation": "p.Val104Met",
+              "variant": "embC_p.Val104Met",
+              "tier": 1,
+              "effect": "missense_variant",
+              "final_confidence_grading": "5) Not assoc w R",
+              "grading_plain": "not associated with resistance",
+              "associated_with_resistance": false,
+              "ppv": 0.0635,
+              "ppv_solo": null,
+              "present_solo_r": 0,
+              "present_solo_s": 0,
+              "additional_grading": null
+            }
+          ],
+          "coordinate_hits": []
+        },
+        "who_other_drug_associations": [],
+        "catalogue_site_alleles": []
+      },
+      {
+        "position": "pos_4242075",
+        "gene": "embC",
+        "encoded_value": 1,
+        "nucleotide": "A",
+        "reference_nucleotide": "G",
+        "alternate_nucleotide": "A",
+        "shap_value": -0.0424,
+        "who_catalogue": {
+          "matched": true,
+          "chromosome": "NC_000962.3",
+          "position": 4242075,
+          "reference_nucleotide": "G",
+          "alternative_nucleotide": "A",
+          "entries": [
+            {
+              "drug": "Ethambutol",
+              "gene": "embC",
+              "mutation": "p.Arg738Gln",
+              "variant": "embC_p.Arg738Gln",
+              "tier": 1,
+              "effect": "missense_variant",
+              "final_confidence_grading": "5) Not assoc w R",
+              "grading_plain": "not associated with resistance",
+              "associated_with_resistance": false,
+              "ppv": 0.0902,
+              "ppv_solo": 0.0128,
+              "present_solo_r": 39,
+              "present_solo_s": 3000,
+              "additional_grading": null
+            }
+          ],
+          "coordinate_hits": []
+        },
+        "who_other_drug_associations": [],
+        "catalogue_site_alleles": []
+      },
+      {
+        "position": "pos_4247431",
+        "gene": "embB",
+        "encoded_value": 0,
+        "nucleotide": "REF",
+        "reference_nucleotide": null,
+        "alternate_nucleotide": null,
+        "shap_value": -0.041223,
+        "who_catalogue": null,
+        "who_other_drug_associations": [],
+        "catalogue_site_alleles": [
+          "embB p.Met306Ile"
+        ]
+      },
+      {
+        "position": "pos_762434",
+        "gene": "rpoB",
+        "encoded_value": 4,
+        "nucleotide": "G",
+        "reference_nucleotide": "T",
+        "alternate_nucleotide": "G",
+        "shap_value": -0.041041,
+        "who_catalogue": {
+          "matched": true,
+          "chromosome": "NC_000962.3",
+          "position": 762434,
+          "reference_nucleotide": "T",
+          "alternative_nucleotide": "G",
+          "entries": [],
+          "coordinate_hits": [
+            {
+              "variant": "rpoB_c.2628T>G",
+              "gene": "rpoB",
+              "mutation": "c.2628T>G",
+              "effect": "synonymous_variant"
+            }
+          ]
+        },
+        "who_other_drug_associations": [],
+        "catalogue_site_alleles": []
+      },
+      {
+        "position": "pos_4241562",
+        "gene": "embC",
+        "encoded_value": 1,
+        "nucleotide": "A",
+        "reference_nucleotide": "G",
+        "alternate_nucleotide": "A",
+        "shap_value": -0.028013,
+        "who_catalogue": {
+          "matched": true,
+          "chromosome": "NC_000962.3",
+          "position": 4241562,
+          "reference_nucleotide": "G",
+          "alternative_nucleotide": "A",
+          "entries": [
+            {
+              "drug": "Ethambutol",
+              "gene": "embC",
+              "mutation": "p.Arg567His",
+              "variant": "embC_p.Arg567His",
+              "tier": 1,
+              "effect": "missense_variant",
+              "final_confidence_grading": "5) Not assoc w R",
+              "grading_plain": "not associated with resistance",
+              "associated_with_resistance": false,
+              "ppv": 0.0413,
+              "ppv_solo": 0.0,
+              "present_solo_r": 0,
+              "present_solo_s": 1,
+              "additional_grading": null
+            }
+          ],
+          "coordinate_hits": []
+        },
+        "who_other_drug_associations": [],
+        "catalogue_site_alleles": []
+      },
+      {
+        "position": "pos_2154724",
+        "gene": "katG",
+        "encoded_value": 1,
+        "nucleotide": "A",
+        "reference_nucleotide": "C",
+        "alternate_nucleotide": "A",
+        "shap_value": -0.023908,
+        "who_catalogue": {
+          "matched": true,
+          "chromosome": "NC_000962.3",
+          "position": 2154724,
+          "reference_nucleotide": "C",
+          "alternative_nucleotide": "A",
+          "entries": [],
+          "coordinate_hits": [
+            {
+              "variant": "katG_p.Arg463Leu",
+              "gene": "katG",
+              "mutation": "p.Arg463Leu",
+              "effect": "missense_variant"
+            }
+          ]
+        },
+        "who_other_drug_associations": [],
+        "catalogue_site_alleles": []
+      },
+      {
+        "position": "pos_761155",
+        "gene": "rpoB",
+        "encoded_value": 0,
+        "nucleotide": "REF",
+        "reference_nucleotide": null,
+        "alternate_nucleotide": null,
+        "shap_value": -0.015391,
+        "who_catalogue": null,
+        "who_other_drug_associations": [],
+        "catalogue_site_alleles": []
+      },
+      {
+        "position": "pos_4247730",
+        "gene": "embB",
+        "encoded_value": 0,
+        "nucleotide": "REF",
+        "reference_nucleotide": null,
+        "alternate_nucleotide": null,
+        "shap_value": -0.010081,
+        "who_catalogue": null,
+        "who_other_drug_associations": [],
+        "catalogue_site_alleles": [
+          "embB p.Gly406Asp",
+          "embB p.Gly406Ala"
+        ]
+      },
+      {
+        "position": "pos_4243460",
+        "gene": "embA",
+        "encoded_value": 0,
+        "nucleotide": "REF",
+        "reference_nucleotide": null,
+        "alternate_nucleotide": null,
+        "shap_value": -0.008245,
+        "who_catalogue": null,
+        "who_other_drug_associations": [],
+        "catalogue_site_alleles": []
+      },
+      {
+        "position": "pos_761110",
+        "gene": "rpoB",
+        "encoded_value": 0,
+        "nucleotide": "REF",
+        "reference_nucleotide": null,
+        "alternate_nucleotide": null,
+        "shap_value": -0.007746,
+        "who_catalogue": null,
+        "who_other_drug_associations": [],
+        "catalogue_site_alleles": []
+      },
+      {
+        "position": "pos_4248003",
+        "gene": "embB",
+        "encoded_value": 0,
+        "nucleotide": "REF",
+        "reference_nucleotide": null,
+        "alternate_nucleotide": null,
+        "shap_value": -0.006157,
+        "who_catalogue": null,
+        "who_other_drug_associations": [],
+        "catalogue_site_alleles": [
+          "embB p.Gln497Arg"
+        ]
+      },
+      {
+        "position": "pos_4249583",
+        "gene": "embB",
+        "encoded_value": 0,
+        "nucleotide": "REF",
+        "reference_nucleotide": null,
+        "alternate_nucleotide": null,
+        "shap_value": -0.005847,
+        "who_catalogue": null,
+        "who_other_drug_associations": [],
+        "catalogue_site_alleles": []
+      },
+      {
+        "position": "pos_2289047",
+        "gene": "pncA",
+        "encoded_value": 1,
+        "nucleotide": "A",
+        "reference_nucleotide": "G",
+        "alternate_nucleotide": "A",
+        "shap_value": -0.005786,
+        "who_catalogue": {
+          "matched": true,
+          "chromosome": "NC_000962.3",
+          "position": 2289047,
+          "reference_nucleotide": "G",
+          "alternative_nucleotide": "A",
+          "entries": [],
+          "coordinate_hits": [
+            {
+              "variant": "pncA_c.195C>T",
+              "gene": "pncA",
+              "mutation": "c.195C>T",
+              "effect": "synonymous_variant"
+            }
+          ]
+        },
+        "who_other_drug_associations": [],
+        "catalogue_site_alleles": []
+      },
+      {
+        "position": "pos_760115",
+        "gene": "rpoB",
+        "encoded_value": 0,
+        "nucleotide": "REF",
+        "reference_nucleotide": null,
+        "alternate_nucleotide": null,
+        "shap_value": -0.005633,
+        "who_catalogue": null,
+        "who_other_drug_associations": [],
+        "catalogue_site_alleles": []
+      },
+      {
+        "position": "pos_1834177",
+        "gene": "rpsA",
+        "encoded_value": 0,
+        "nucleotide": "REF",
+        "reference_nucleotide": null,
+        "alternate_nucleotide": null,
+        "shap_value": -0.0046,
+        "who_catalogue": null,
+        "who_other_drug_associations": [],
+        "catalogue_site_alleles": []
+      },
+      {
+        "position": "pos_761889",
+        "gene": "rpoB",
+        "encoded_value": 0,
+        "nucleotide": "REF",
+        "reference_nucleotide": null,
+        "alternate_nucleotide": null,
+        "shap_value": -0.003709,
+        "who_catalogue": null,
+        "who_other_drug_associations": [],
+        "catalogue_site_alleles": []
+      },
+      {
+        "position": "pos_761140",
+        "gene": "rpoB",
+        "encoded_value": 0,
+        "nucleotide": "REF",
+        "reference_nucleotide": null,
+        "alternate_nucleotide": null,
+        "shap_value": -0.003648,
+        "who_catalogue": null,
+        "who_other_drug_associations": [],
+        "catalogue_site_alleles": []
+      },
+      {
+        "position": "pos_4239891",
+        "gene": "embC",
+        "encoded_value": 0,
+        "nucleotide": "REF",
+        "reference_nucleotide": null,
+        "alternate_nucleotide": null,
+        "shap_value": -0.002939,
+        "who_catalogue": null,
+        "who_other_drug_associations": [],
+        "catalogue_site_alleles": []
+      },
+      {
+        "position": "pos_1674048",
+        "gene": "fabG1",
+        "encoded_value": 0,
+        "nucleotide": "REF",
+        "reference_nucleotide": null,
+        "alternate_nucleotide": null,
+        "shap_value": -0.002694,
+        "who_catalogue": null,
+        "who_other_drug_associations": [],
+        "catalogue_site_alleles": []
+      }
+    ]
+  },
+  "PYRAZINAMIDE": {
+    "sample": "ERR038266",
+    "drug": "PYRAZINAMIDE",
+    "prediction": "Susceptible",
+    "probability_resistant": 0.0,
+    "explanation": "ERR038266 is predicted Susceptible to PYRAZINAMIDE (probability of resistance 0.0000).\n\nThe largest SHAP contribution is pos_762434 in rpoB (T>G, SHAP -0.0518), which pushes the prediction toward susceptibility. The allele matches WHO catalogue variant rpoB_c.2628T>G, which has no grading row for Pyrazinamide.\n\npos_2289047 in pncA (G>A, SHAP -0.0274), which pushes the prediction toward susceptibility. In the WHO mutation catalogue this allele is pncA c.195C>T (pncA_c.195C>T), a synonymous variant. The final confidence grading for Pyrazinamide is 5) Not assoc w R (not associated with resistance).\n\nNo allele in this VCF is graded 1) Assoc w R or 2) Assoc w R - Interim for Pyrazinamide.\n\nSHAP values are the contributions of each feature to this model's resistant-class score for the isolate. WHO grades come from the second-edition mutation catalogue (WHO/UCN/TB/2023.7): an exact match on NC_000962.3 position, reference nucleotide, and alternate nucleotide, then the final confidence grading for the drug.",
+    "who_catalogue_source": "WHO catalogue of mutations in Mycobacterium tuberculosis complex, second edition (WHO/UCN/TB/2023.7)",
+    "known_resistance_variants": [],
+    "top_shap_features": [
+      {
+        "position": "pos_762434",
+        "gene": "rpoB",
+        "encoded_value": 4,
+        "nucleotide": "G",
+        "reference_nucleotide": "T",
+        "alternate_nucleotide": "G",
+        "shap_value": -0.051822,
+        "who_catalogue": {
+          "matched": true,
+          "chromosome": "NC_000962.3",
+          "position": 762434,
+          "reference_nucleotide": "T",
+          "alternative_nucleotide": "G",
+          "entries": [],
+          "coordinate_hits": [
+            {
+              "variant": "rpoB_c.2628T>G",
+              "gene": "rpoB",
+              "mutation": "c.2628T>G",
+              "effect": "synonymous_variant"
+            }
+          ]
+        },
+        "who_other_drug_associations": [],
+        "catalogue_site_alleles": []
+      },
+      {
+        "position": "pos_2154724",
+        "gene": "katG",
+        "encoded_value": 1,
+        "nucleotide": "A",
+        "reference_nucleotide": "C",
+        "alternate_nucleotide": "A",
+        "shap_value": -0.044968,
+        "who_catalogue": {
+          "matched": true,
+          "chromosome": "NC_000962.3",
+          "position": 2154724,
+          "reference_nucleotide": "C",
+          "alternative_nucleotide": "A",
+          "entries": [],
+          "coordinate_hits": [
+            {
+              "variant": "katG_p.Arg463Leu",
+              "gene": "katG",
+              "mutation": "p.Arg463Leu",
+              "effect": "missense_variant"
+            }
+          ]
+        },
+        "who_other_drug_associations": [],
+        "catalogue_site_alleles": []
+      },
+      {
+        "position": "pos_4247429",
+        "gene": "embB",
+        "encoded_value": 0,
+        "nucleotide": "REF",
+        "reference_nucleotide": null,
+        "alternate_nucleotide": null,
+        "shap_value": -0.041538,
+        "who_catalogue": null,
+        "who_other_drug_associations": [],
+        "catalogue_site_alleles": []
+      },
+      {
+        "position": "pos_4242075",
+        "gene": "embC",
+        "encoded_value": 1,
+        "nucleotide": "A",
+        "reference_nucleotide": "G",
+        "alternate_nucleotide": "A",
+        "shap_value": -0.036545,
+        "who_catalogue": {
+          "matched": true,
+          "chromosome": "NC_000962.3",
+          "position": 4242075,
+          "reference_nucleotide": "G",
+          "alternative_nucleotide": "A",
+          "entries": [],
+          "coordinate_hits": [
+            {
+              "variant": "embC_p.Arg738Gln",
+              "gene": "embC",
+              "mutation": "p.Arg738Gln",
+              "effect": "missense_variant"
+            }
+          ]
+        },
+        "who_other_drug_associations": [],
+        "catalogue_site_alleles": []
+      },
+      {
+        "position": "pos_4247431",
+        "gene": "embB",
+        "encoded_value": 0,
+        "nucleotide": "REF",
+        "reference_nucleotide": null,
+        "alternate_nucleotide": null,
+        "shap_value": -0.034731,
+        "who_catalogue": null,
+        "who_other_drug_associations": [],
+        "catalogue_site_alleles": []
+      },
+      {
+        "position": "pos_4241562",
+        "gene": "embC",
+        "encoded_value": 1,
+        "nucleotide": "A",
+        "reference_nucleotide": "G",
+        "alternate_nucleotide": "A",
+        "shap_value": -0.034019,
+        "who_catalogue": {
+          "matched": true,
+          "chromosome": "NC_000962.3",
+          "position": 4241562,
+          "reference_nucleotide": "G",
+          "alternative_nucleotide": "A",
+          "entries": [],
+          "coordinate_hits": [
+            {
+              "variant": "embC_p.Arg567His",
+              "gene": "embC",
+              "mutation": "p.Arg567His",
+              "effect": "missense_variant"
+            }
+          ]
+        },
+        "who_other_drug_associations": [],
+        "catalogue_site_alleles": []
+      },
+      {
+        "position": "pos_761155",
+        "gene": "rpoB",
+        "encoded_value": 0,
+        "nucleotide": "REF",
+        "reference_nucleotide": null,
+        "alternate_nucleotide": null,
+        "shap_value": -0.032327,
+        "who_catalogue": null,
+        "who_other_drug_associations": [],
+        "catalogue_site_alleles": []
+      },
+      {
+        "position": "pos_2289047",
+        "gene": "pncA",
+        "encoded_value": 1,
+        "nucleotide": "A",
+        "reference_nucleotide": "G",
+        "alternate_nucleotide": "A",
+        "shap_value": -0.027416,
+        "who_catalogue": {
+          "matched": true,
+          "chromosome": "NC_000962.3",
+          "position": 2289047,
+          "reference_nucleotide": "G",
+          "alternative_nucleotide": "A",
+          "entries": [
+            {
+              "drug": "Pyrazinamide",
+              "gene": "pncA",
+              "mutation": "c.195C>T",
+              "variant": "pncA_c.195C>T",
+              "tier": 1,
+              "effect": "synonymous_variant",
+              "final_confidence_grading": "5) Not assoc w R",
+              "grading_plain": "not associated with resistance",
+              "associated_with_resistance": false,
+              "ppv": 0.057,
+              "ppv_solo": null,
+              "present_solo_r": null,
+              "present_solo_s": null,
+              "additional_grading": null
+            }
+          ],
+          "coordinate_hits": []
+        },
+        "who_other_drug_associations": [],
+        "catalogue_site_alleles": []
+      },
+      {
+        "position": "pos_761110",
+        "gene": "rpoB",
+        "encoded_value": 0,
+        "nucleotide": "REF",
+        "reference_nucleotide": null,
+        "alternate_nucleotide": null,
+        "shap_value": -0.019394,
+        "who_catalogue": null,
+        "who_other_drug_associations": [],
+        "catalogue_site_alleles": []
+      },
+      {
+        "position": "pos_4240172",
+        "gene": "embC",
+        "encoded_value": 1,
+        "nucleotide": "A",
+        "reference_nucleotide": "G",
+        "alternate_nucleotide": "A",
+        "shap_value": 0.016035,
+        "who_catalogue": {
+          "matched": true,
+          "chromosome": "NC_000962.3",
+          "position": 4240172,
+          "reference_nucleotide": "G",
+          "alternative_nucleotide": "A",
+          "entries": [],
+          "coordinate_hits": [
+            {
+              "variant": "embC_p.Val104Met",
+              "gene": "embC",
+              "mutation": "p.Val104Met",
+              "effect": "missense_variant"
+            }
+          ]
+        },
+        "who_other_drug_associations": [],
+        "catalogue_site_alleles": []
+      },
+      {
+        "position": "pos_1834177",
+        "gene": "rpsA",
+        "encoded_value": 0,
+        "nucleotide": "REF",
+        "reference_nucleotide": null,
+        "alternate_nucleotide": null,
+        "shap_value": -0.011776,
+        "who_catalogue": null,
+        "who_other_drug_associations": [],
+        "catalogue_site_alleles": []
+      },
+      {
+        "position": "pos_4243460",
+        "gene": "embA",
+        "encoded_value": 0,
+        "nucleotide": "REF",
+        "reference_nucleotide": null,
+        "alternate_nucleotide": null,
+        "shap_value": -0.00908,
+        "who_catalogue": null,
+        "who_other_drug_associations": [],
+        "catalogue_site_alleles": []
+      },
+      {
+        "position": "pos_4249583",
+        "gene": "embB",
+        "encoded_value": 0,
+        "nucleotide": "REF",
+        "reference_nucleotide": null,
+        "alternate_nucleotide": null,
+        "shap_value": -0.006793,
+        "who_catalogue": null,
+        "who_other_drug_associations": [],
+        "catalogue_site_alleles": []
+      },
+      {
+        "position": "pos_2155168",
+        "gene": "katG",
+        "encoded_value": 0,
+        "nucleotide": "REF",
+        "reference_nucleotide": null,
+        "alternate_nucleotide": null,
+        "shap_value": -0.006652,
+        "who_catalogue": null,
+        "who_other_drug_associations": [],
+        "catalogue_site_alleles": []
+      },
+      {
+        "position": "pos_2289213",
+        "gene": "pncA",
+        "encoded_value": 0,
+        "nucleotide": "REF",
+        "reference_nucleotide": null,
+        "alternate_nucleotide": null,
+        "shap_value": -0.005194,
+        "who_catalogue": null,
+        "who_other_drug_associations": [],
+        "catalogue_site_alleles": [
+          "pncA p.Gln10Pro",
+          "pncA p.Gln10Arg"
+        ]
+      },
+      {
+        "position": "pos_763031",
+        "gene": "rpoB",
+        "encoded_value": 3,
+        "nucleotide": "C",
+        "reference_nucleotide": "T",
+        "alternate_nucleotide": "C",
+        "shap_value": 0.00497,
+        "who_catalogue": {
+          "matched": true,
+          "chromosome": "NC_000962.3",
+          "position": 763031,
+          "reference_nucleotide": "T",
+          "alternative_nucleotide": "C",
+          "entries": [],
+          "coordinate_hits": [
+            {
+              "variant": "rpoB_c.3225T>C",
+              "gene": "rpoB",
+              "mutation": "c.3225T>C",
+              "effect": "synonymous_variant"
+            }
+          ]
+        },
+        "who_other_drug_associations": [],
+        "catalogue_site_alleles": []
+      },
+      {
+        "position": "pos_1674481",
+        "gene": "inhA",
+        "encoded_value": 0,
+        "nucleotide": "REF",
+        "reference_nucleotide": null,
+        "alternate_nucleotide": null,
+        "shap_value": -0.004608,
+        "who_catalogue": null,
+        "who_other_drug_associations": [],
+        "catalogue_site_alleles": []
+      },
+      {
+        "position": "pos_4247730",
+        "gene": "embB",
+        "encoded_value": 0,
+        "nucleotide": "REF",
+        "reference_nucleotide": null,
+        "alternate_nucleotide": null,
+        "shap_value": -0.004569,
+        "who_catalogue": null,
+        "who_other_drug_associations": [],
+        "catalogue_site_alleles": []
+      },
+      {
+        "position": "pos_760115",
+        "gene": "rpoB",
+        "encoded_value": 0,
+        "nucleotide": "REF",
+        "reference_nucleotide": null,
+        "alternate_nucleotide": null,
+        "shap_value": -0.004548,
+        "who_catalogue": null,
+        "who_other_drug_associations": [],
+        "catalogue_site_alleles": []
+      },
+      {
+        "position": "pos_4242803",
+        "gene": "embC",
+        "encoded_value": 0,
+        "nucleotide": "REF",
+        "reference_nucleotide": null,
+        "alternate_nucleotide": null,
+        "shap_value": 0.004496,
+        "who_catalogue": null,
+        "who_other_drug_associations": [],
+        "catalogue_site_alleles": []
+      }
+    ]
   }
 }
