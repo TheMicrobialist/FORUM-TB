@@ -252,7 +252,9 @@ def predict_and_explain(sample_id, feature_vector, drug, model_dir,
         for feat in feature_vector.index:
             pos = int(str(feat).replace("pos_", ""))
             encoded_by_pos[pos] = int(feature_vector[feat])
-            shap_by_pos[pos] = float(shap_series[feat])
+            # nonzero_shap() drops exactly-zero features, so a missing name
+            # means a SHAP of 0.0 rather than an error.
+            shap_by_pos[pos] = float(shap_series.get(feat, 0.0))
         known_variants = catalogue.known_resistance_variants(
             iter_alleles(variants), drug, shap_by_pos, encoded_by_pos
         )
