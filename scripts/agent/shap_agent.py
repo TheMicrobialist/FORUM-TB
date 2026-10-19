@@ -483,8 +483,45 @@ def load_predictions(path) -> dict:
     return {"data": data, "sample_id": sample_id, "dir": path.parent, "path": path}
 
 
+def _who_note(feat: dict) -> str:
+    """WHO catalogue context for one attributed position, or '' if there is none.
+
+    Three cases, in order of strength: the allele itself is graded; the allele
+    is in the catalogue but ungraded for this drug while graded for another;
+    the isolate carries the reference base at a site where graded alleles
+    exist. The third is what explains a susceptible call.
+    """
+    cat = feat.get("who_catalogue") or {}
+
+    entries = cat.get("entries") or []
+    if entries:
+        e = entries[0]
+        return f"  [WHO: {e.get('variant')}, {e.get('final_confidence_grading')}]"
+
+    others = feat.get("who_other_drug_associations") or []
+    if others:
+        o = others[0]
+        return (f"  [WHO: {o.get('variant')}, no grading for this drug; "
+                f"{o.get('final_confidence_grading')} for {o.get('drug')}]")
+
+    hits = cat.get("coordinate_hits") or []
+    if hits:
+        return f"  [WHO: {hits[0].get('variant')}, ungraded]"
+
+    sites = feat.get("catalogue_site_alleles") or []
+    if sites:
+        return (f"  [WHO site: {', '.join(sites[:3])} — "
+                f"isolate carries the reference base]")
+
+    return ""
+
+
 def format_profile(active: dict, drug: str = None) -> str:
-    """Render the resistance profile and top attributions as prompt text."""
+    """Render the resistance profile and top attributions as prompt text.
+
+    Carries the WHO catalogue grounding written by the prediction step, so the
+    model is given it rather than having to fetch it with get_shap_detail.
+    """
     lines = []
     drugs = [drug.upper()] if drug else [d for d in DRUGS if d in active["data"]]
     for d in drugs:
@@ -501,7 +538,21 @@ def format_profile(active: dict, drug: str = None) -> str:
                 f"  {feat.get('position')}  {feat.get('gene')}  "
                 f"base={NUC_DECODE.get(int(enc), '?')}  "
                 f"SHAP={feat.get('shap_value'):+.5f}"
+                f"{_who_note(feat)}"
             )
+
+        known = entry.get("known_resistance_variants") or []
+        if known:
+            lines.append(f"  WHO alleles graded for {d} in this isolate:")
+            for k in known:
+                ppv = k.get("ppv")
+                ppv_txt = f", PPV {ppv:.3f}" if isinstance(ppv, (int, float)) else ""
+                lines.append(
+                    f"    {k.get('variant')} ({k.get('effect')})"
+                    f" — {k.get('final_confidence_grading')}{ppv_txt}"
+                )
+        else:
+            lines.append(f"  No WHO allele graded 1 or 2 for {d} in this isolate.")
     return "\n".join(lines) if lines else "(no drug entries found)"
 
 
