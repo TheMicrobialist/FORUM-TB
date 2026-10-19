@@ -118,7 +118,7 @@ Phases 1–2 run once, offline, and their outputs are frozen. Phases 3–4 run p
 - Phase 4. interpret (the agent)
   - A bespoke tool-using harness around an LLM. "Harness" is informal, not a standard with types — named frameworks exist (LangChain, OpenAI Agents SDK, smolagents), but this one is hand-written Python that delegates only the loop to Anthropic's SDK `beta.messages.tool_runner`
     - Harness: `scripts/agent/shap_agent.py` — a system prompt, four tool definitions, and the loop that runs them. It decides what the model may look up and forces it to look rather than recall, which is the interpretability claim
-    - Model: set in `scripts/agent/agent_config.yaml` as backend / model / effort / max_tokens, now anthropic / `claude-opus-5` / high / 16000. `openai` also works (`_run_openai:633`); Gemini is not implemented (#18)
+    - Model: set in `scripts/agent/agent_config.yaml` as backend / model / effort / max_tokens, now anthropic / `claude-opus-5` / high / 16000. `openai` also works (`_run_openai:684`)
 
   - Step 1. Load the Phase 3 record, 3a and 3b together
     - `load_predictions` (`:474`) reads the whole of `<SAMPLE>_predictions.json` into a dict — every drug, every key, both halves
