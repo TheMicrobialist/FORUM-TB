@@ -109,6 +109,9 @@ class AgentConfig:
     model: str = "claude-opus-5"
     effort: str = "high"
     max_tokens: int = 16000
+    # openai only: the anthropic path rejects temperature with a 400 when
+    # thinking is on. 0.0 for reproducibility; the default would be 1.0.
+    temperature: float = 0.0
 
     def __post_init__(self):
         backend = str(self.backend or "anthropic").strip().lower()
@@ -516,6 +519,20 @@ def _who_note(feat: dict) -> str:
     return ""
 
 
+def _in_training_cohort(sample_id: str) -> bool:
+    """True if this isolate is one of the 9,798 the models were fitted over.
+
+    Membership, not train/test split: reproducing the split here would couple
+    the agent to rf_shap_v2.py's constants and silently misreport if they
+    change. Cohort membership is enough to tell the reader the score is not
+    from an unseen isolate.
+    """
+    matrix = _matrix()
+    if matrix.empty or "SAMPLE" not in matrix.columns:
+        return False
+    return bool((matrix["SAMPLE"] == sample_id).any())
+
+
 def format_profile(active: dict, drug: str = None) -> str:
     """Render the resistance profile and top attributions as prompt text.
 
@@ -523,6 +540,12 @@ def format_profile(active: dict, drug: str = None) -> str:
     model is given it rather than having to fetch it with get_shap_detail.
     """
     lines = []
+    if _in_training_cohort(active.get("sample_id", "")):
+        lines.append(
+            f"Provenance: {active['sample_id']} is one of the 9,798 isolates the "
+            "models were fitted over, so these scores are not out-of-sample. "
+            "Say so in Caveats for every drug."
+        )
     drugs = [drug.upper()] if drug else [d for d in DRUGS if d in active["data"]]
     for d in drugs:
         entry = active["data"].get(d)
@@ -704,6 +727,7 @@ def _run_openai(cfg: AgentConfig, prompt: str, trace: bool) -> str:
             tools=tools,
             tool_choice="auto",
             max_tokens=cfg.max_tokens,
+            temperature=cfg.temperature,
         )
         message = response.choices[0].message
         assistant = {"role": "assistant", "content": message.content or ""}

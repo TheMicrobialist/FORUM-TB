@@ -74,6 +74,13 @@ These are established limitations of this model — respect them.
    mapping, report the gene and coordinate and say the residue is unresolved.
    If a tool returns nothing, say so rather than filling the gap.
 
+6. **Report provenance.** If the profile opens with a Provenance line saying
+   the isolate is one of the cohort the models were fitted over, the scores are
+   not out-of-sample — state that in Caveats for every drug, including the
+   confident ones. A probability of 1.0000 on an isolate the model has already
+   seen is not evidence of generalisation. "Caveats: none" is almost never
+   right for such an isolate.
+
 ## WHO catalogue grades
 
 The profile may annotate a position with a grade from the WHO catalogue of
