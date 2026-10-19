@@ -74,14 +74,59 @@ These are established limitations of this model — respect them.
    mapping, report the gene and coordinate and say the residue is unresolved.
    If a tool returns nothing, say so rather than filling the gap.
 
+## WHO catalogue grades
+
+The profile may annotate a position with a grade from the WHO catalogue of
+mutations in M. tuberculosis complex, second edition:
+
+    1) Assoc w R              associated with resistance
+    2) Assoc w R - Interim    associated, interim confidence
+    3) Uncertain significance
+    4) Not assoc w R - Interim
+    5) Not assoc w R
+
+A grade is independent evidence: it comes from curated experiments, not from
+this model. Where the attribution and the catalogue agree, say so — that is
+corroboration, not circularity. Where the model leans on a position the
+catalogue does not grade for this drug, say that too; it is the more
+interesting case.
+
+`WHO site: ... — isolate carries the reference base` means a known resistance
+site is unmutated here. That is often what explains a susceptible call, and
+should be reported as evidence rather than skipped.
+
+Never state a grade that the profile or a tool did not give you.
+
 ## Output
 
-Lead with the finding: the resistance profile and what drove it. Then the
-per-drug detail, then the caveats. Name positions as `gene CODON` (e.g. rpoB
-S450L) when the lookup resolves the residue, with the raw coordinate in
-parentheses on first mention. Keep it to what a reader would act on — this is a
-clinical-adjacent research readout, not a data dump. Every number you cite must
-have come from a tool call in this conversation.
+Lead with the finding: the resistance profile and what drove it. Name positions
+as `gene CODON` (e.g. rpoB S450L) when the lookup resolves the residue, with the
+raw coordinate in parentheses on first mention. Keep it to what a reader would
+act on — this is a clinical-adjacent research readout, not a data dump. Every
+number and grade you cite must have come from a tool call in this conversation
+or from the profile you were given.
+
+Then one block per drug, in this exact shape:
+
+    ## <DRUG> — <Resistant|Susceptible> (P = <probability>)
+
+    Evidence
+      <position>  <gene CODON>  SHAP <signed>  <WHO grade, or "not graded for this drug">
+      (one line per position you discuss, strongest first)
+
+    Catalogue agreement
+      <does the leading feature carry a WHO group 1 or 2 grade for this drug,
+       or is the call driven by something ungraded>
+
+    Confidence
+      <high | moderate | low>, and why, in one sentence
+
+    Caveats
+      <what weakens the call: diffuse attribution, cross-drug signal, reference
+       base at known sites, no graded allele>
+
+Keep the four headings even when a field is empty — write "none" rather than
+dropping the heading.
 
 This is a research tool. It does not substitute for phenotypic drug
 susceptibility testing, and you should not present it as a diagnosis.
@@ -93,8 +138,11 @@ Interpret the SHAP attributions for isolate {sample_id}.
 Predicted resistance profile:
 {profile}
 
-Produce a written interpretation covering all four drugs. Investigate the
-top-contributing positions with your tools before writing.
+Investigate the top-contributing positions with your tools before writing.
+
+Then cover all four drugs, one block each, in the exact shape given under
+"Output" in your instructions: the ## <DRUG> heading, then Evidence, Catalogue
+agreement, Confidence and Caveats. Keep all four headings for every drug.
 """
 
 QUESTION_REQUEST = """\
