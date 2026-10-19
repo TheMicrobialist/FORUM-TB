@@ -52,3 +52,8 @@ test_data/*
 
 # Per-isolate prediction outputs (JSON, SHAP CSVs, waterfall PNGs)
 results/predictions/
+
+# Reading library — PDFs stay local, metadata is tracked
+literature/*
+!literature/README.md
+!literature/background.bib

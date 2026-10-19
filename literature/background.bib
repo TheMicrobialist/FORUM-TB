@@ -1,0 +1,74 @@
+% Reading record for FORUM-TB: everything read, cited or not.
+% Entries that end up cited move to ../manuscript/references.bib.
+%
+% Name the local PDF after the key: literature/<key>.pdf
+% Every entry needs a DOI, PMID or arXiv id so it can be re-fetched.
+%
+% UNVERIFIED entries came from a search and have not been checked against
+% PubMed, Crossref or arXiv. Verify before moving anything to references.bib.
+
+% ---------------------------------------------------------------------------
+% LLM explanation faithfulness
+% ---------------------------------------------------------------------------
+
+% UNVERIFIED — found 2026-10-19, not yet read.
+% Names the faithfulness-plausibility gap: rationales can be fluent and
+% medically plausible while not reflecting the model's computation. Reports a
+% study where all tested LLMs scored 0.0 on attention-explanation alignment.
+@article{unverified2026decoderonly,
+  title   = {Explainability of decoder-only clinical large language models: a scoping review},
+  journal = {Artificial Intelligence in Medicine},
+  year    = {2026},
+  doi     = {10.1016/j.artmed.2026.103533},
+  note    = {UNVERIFIED: authors, volume and DOI need checking}
+}
+
+% UNVERIFIED — found 2026-10-19, not yet read.
+% Had an LLM attribute feature importance for medical text classification.
+% GPT explainers struggled to produce reliable attributions; SHAP and
+% integrated gradients scored comparably. Direct support for letting SHAP
+% compute attributions and the agent only report them.
+@article{unverified2026jmirattribution,
+  title   = {Understanding Transformer-Based Classifications of Medical Text Using a Large Language Model for the Attribution of Feature Importance},
+  journal = {JMIR Medical Informatics},
+  year    = {2026},
+  doi     = {10.2196/81644},
+  note    = {UNVERIFIED: authors and volume need checking}
+}
+
+% UNVERIFIED — found 2026-10-19, not yet read.
+% Runs SHAP on both a LightGBM model and an LLM classifier and treats
+% misalignment as a faithfulness risk. Methodological analogue for auditing
+% the agent's claims against tool output.
+@misc{unverified2025creditrisk,
+  title        = {Interpreting LLMs as Credit Risk Classifiers: Do Their Feature Explanations Align with Classical ML?},
+  year         = {2025},
+  eprint       = {2510.25701},
+  archivePrefix = {arXiv},
+  note         = {UNVERIFIED: authors need checking}
+}
+
+% ---------------------------------------------------------------------------
+% Agents in bioinformatics
+% ---------------------------------------------------------------------------
+
+% UNVERIFIED — found 2026-10-19, not yet read.
+% Evaluates agents on RNA-seq, variant calling and metagenomics. Frontier
+% agents often complete multi-step pipelines, but corrupted inputs and decoy
+% files expose step-level reasoning failures.
+@misc{unverified2026bioagentbench,
+  title        = {BioAgent Bench: An AI Agent Evaluation Suite for Bioinformatics},
+  year         = {2026},
+  eprint       = {2601.21800},
+  archivePrefix = {arXiv},
+  note         = {UNVERIFIED: authors and venue need checking}
+}
+
+% UNVERIFIED — found 2026-10-19, not yet read.
+% 244 expert-curated end-to-end analysis tasks; benchmarks Biomni and
+% ToolsGenie. Useful for naming the general-purpose biomedical agents.
+@misc{unverified2026promptbiobench,
+  title  = {PromptBio-Bench: Benchmarking LLM-based Bioinformatics Agents for End-to-End Data Analysis},
+  year   = {2026},
+  note   = {UNVERIFIED: bioRxiv, authors and DOI need checking}
+}
