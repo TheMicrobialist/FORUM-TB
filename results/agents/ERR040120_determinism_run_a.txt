@@ -1,0 +1,64 @@
+  Agent: openai / gpt-4o
+## RIFAMPICIN — Resistant (P = 1.0)
+
+Evidence
+  pos_761155  rpoB S450L  SHAP +0.28054  1) Assoc w R
+  pos_4247730  embB G406D  SHAP +0.06402  not graded for this drug
+  pos_761110  rpoB (reference base)  SHAP -0.03123  WHO site: rpoB p.Asp435Val, rpoB p.Asp435Gly, rpoB p.Asp435Ala — isolate carries the reference base
+
+Catalogue agreement
+  The leading feature, rpoB S450L, carries a WHO group 1 grade for RIFAMPICIN.
+
+Confidence
+  High, due to the presence of the well-established rpoB S450L mutation associated with resistance.
+
+Caveats
+  ERR040120 is one of the cohort the models were fitted over, so these scores are not out-of-sample.
+
+## ISONIAZID — Resistant (P = 1.0)
+
+Evidence
+  pos_2155168  katG S315T  SHAP +0.17874  1) Assoc w R
+  pos_4247730  embB G406D  SHAP +0.06041  not graded for this drug
+  pos_1674481  inhA (reference base)  SHAP -0.00613  WHO site: inhA p.Ser94Ala — isolate carries the reference base
+
+Catalogue agreement
+  The leading feature, katG S315T, carries a WHO group 1 grade for ISONIAZID.
+
+Confidence
+  High, due to the presence of the well-established katG S315T mutation associated with resistance.
+
+Caveats
+  ERR040120 is one of the cohort the models were fitted over, so these scores are not out-of-sample.
+
+## ETHAMBUTOL — Resistant (P = 0.7334)
+
+Evidence
+  pos_4247730  embB G406D  SHAP +0.14802  1) Assoc w R
+  pos_2288998  pncA H82D  SHAP +0.13753  ungraded
+  pos_4247431  embB (reference base)  SHAP -0.04864  WHO site: embB p.Met306Ile — isolate carries the reference base
+
+Catalogue agreement
+  The leading feature, embB G406D, carries a WHO group 1 grade for ETHAMBUTOL.
+
+Confidence
+  Moderate, as the model relies on a known resistance mutation but also on ungraded positions.
+
+Caveats
+  ERR040120 is one of the cohort the models were fitted over, so these scores are not out-of-sample.
+
+## PYRAZINAMIDE — Resistant (P = 0.8508)
+
+Evidence
+  pos_4247730  embB G406D  SHAP +0.22329  not graded for this drug
+  pos_2288998  pncA H82D  SHAP +0.02228  3) Uncertain significance
+  pos_761155  rpoB S450L  SHAP +0.09398  not graded for this drug
+
+Catalogue agreement
+  No WHO allele graded 1 or 2 for PYRAZINAMIDE in this isolate.
+
+Confidence
+  Low, due to reliance on ungraded mutations and positions with uncertain significance.
+
+Caveats
+  ERR040120 is one of the cohort the models were fitted over, so these scores are not out-of-sample.

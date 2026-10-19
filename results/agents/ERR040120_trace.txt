@@ -1,0 +1,5 @@
+  Agent: openai / gpt-4o
+  [tool] lookup_position({"position": "761155", "observed_nucleotide": "T"})
+  [tool] lookup_position({"position": "4247730", "observed_nucleotide": "A"})
+  [tool] lookup_position({"position": "2155168", "observed_nucleotide": "G"})
+  [tool] lookup_position({"position": "2288998", "observed_nucleotide": "C"})
